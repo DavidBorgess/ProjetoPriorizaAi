@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="home">
+<a class="so-leitor" href="#principal">Ir para o conteúdo</a>
+<div class="painel">
+  <aside class="lateral" id="lateral" aria-label="Barra lateral"></aside>
+  <main class="principal" id="principal">
+    <header class="barra-topo" id="topo"></header>
+    <div class="cab-pg">
+      <div><h1 id="ola">Olá!</h1><p class="mudo">Aqui está o resumo das suas tarefas de hoje.</p></div>
+    </div>
+    <ul class="stats" id="stats" aria-label="Resumo das tarefas"></ul>
+    <div class="grade">
+      <div class="col">
+        <section class="pcard" aria-labelledby="t-tarefas">
+          <div class="cab"><div class="cab"><span class="icone-box" data-ic="lista"></span><h2 id="t-tarefas">Minhas tarefas</h2></div><button class="btn primario" data-a="nova">+ Nova tarefa</button></div>
+          <div id="lista-tarefas"></div>
+        </section>
+      </div>
+      <div class="col">
+        <section class="pcard" aria-labelledby="t-sel"><h2 id="t-sel" class="leg" style="font-family:var(--sans)">Tarefa selecionada</h2><div class="detalhe" id="detalhe"></div></section>
+        <section class="pcard" aria-labelledby="t-lemb"><div class="cab" style="justify-content:flex-start"><span class="icone-box" data-ic="sino"></span><h2 id="t-lemb">Próximos lembretes</h2></div><ul class="lembretes" id="lembretes"></ul></section>
+      </div>
+      <div class="col">
+        <section class="pcard" aria-labelledby="t-cal"><div class="cab" style="justify-content:flex-start"><span class="icone-box" data-ic="calendario"></span><h2 id="t-cal">Calendário</h2></div><div id="cal"></div></section>
+        <section class="pcard" aria-labelledby="t-prog"><div class="cab" style="justify-content:flex-start"><span class="icone-box" data-ic="grafico"></span><h2 id="t-prog">Progresso</h2></div><div id="progresso"></div></section>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

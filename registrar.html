@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registrar · Prioriza Aí</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="registrar">
+<div class="tela">
+<aside class="lado" aria-label="Sobre o Prioriza Aí">
+  <a class="logo" href="index.html"><span class="logo-i" data-ic="calendario" data-t="22"></span><span>PRIORIZA <b>AÍ</b></span></a>
+  <div class="lado-meio">
+    <p class="display">Organize hoje, conquiste amanhã.</p>
+    <p class="destaque-txt" style="color:#fff">A agenda que ajuda estudantes a manter provas, trabalhos e tarefas em dia.</p>
+    <ul class="bens">
+      <li class="ben"><span class="icone-box" data-ic="lista" data-t="24"></span><div><b class="neg">Subtarefas em cada tarefa</b><p class="peq">Divida o que é grande em passos pequenos.</p></div></li>
+      <li class="ben"><span class="icone-box" data-ic="grafico" data-t="24"></span><div><b class="neg">Andamento à vista</b><p class="peq">Veja o que já foi feito e o que falta.</p></div></li>
+      <li class="ben"><span class="icone-box" data-ic="zap" data-t="24"></span><div><b class="neg">Lembretes no WhatsApp</b><p class="peq">Avisos periódicos para nada passar.</p></div></li>
+    </ul>
+  </div>
+  <div class="lembrete-ex"><span class="icone-box" style="border-radius:50%" data-ic="zap"></span><div style="display:flex;flex-direction:column"><b class="neg">Prova de JavaScript hoje às 19h</b><span class="leg">Lembrete no WhatsApp, agora</span></div></div>
+</aside>
+<main class="form">
+  <div class="form-topo"><a class="btn" href="index.html"><span data-ic="voltar" data-t="18"></span>Voltar ao início</a></div>
+  <div class="form-col">
+    <nav class="abas" aria-label="Entrar ou registrar"><a href="entrar.html">Entrar</a><a href="registrar.html" aria-current="page">Registrar</a></nav>
+    <div><h1>Crie sua conta</h1><p class="mudo">Comece no plano Free, sem cartão de crédito.</p></div>
+    <form class="campos" id="f-registrar">
+      <div class="campo"><label for="r-nome">Nome</label><div class="caixa"><span data-ic="usuario"></span><input id="r-nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome completo" required></div></div>
+      <div class="campo"><label for="r-mail">E-mail</label><div class="caixa"><span data-ic="email"></span><input id="r-mail" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required></div></div>
+      <div class="campo"><label for="r-zap">WhatsApp</label><div class="caixa"><span data-ic="zap"></span><input id="r-zap" name="zap" type="tel" autocomplete="tel" placeholder="(11) 90000-0000" aria-describedby="d-zap" required></div><span class="leg" id="d-zap">Os lembretes chegam neste número.</span></div>
+      <div class="campo"><label for="r-senha">Senha</label><div class="caixa"><span data-ic="cadeado"></span><input id="r-senha" name="senha" type="password" autocomplete="new-password" placeholder="Crie uma senha" aria-describedby="d-senha" required><button class="icone-btn" type="button" data-ver="r-senha" aria-pressed="false" aria-label="Mostrar senha"><span data-ic="olho"></span></button></div><span class="leg" id="d-senha">Use pelo menos 8 caracteres.</span></div>
+      <label class="opcao"><input class="check" type="checkbox" name="termos"><span class="peq">Li e concordo com os <a class="link" href="#">Termos de uso</a> e a <a class="link" href="#">Política de privacidade</a>.</span></label>
+      <p class="erro" id="erro" role="alert"></p>
+      <button class="btn primario grande bloco" type="submit">Criar conta</button>
+    </form>
+    <p class="peq troca">Já tem conta? <a class="link" href="entrar.html">Entrar</a></p>
+  </div>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

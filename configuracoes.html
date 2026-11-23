@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Configurações · Prioriza Aí</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="configuracoes">
+<a class="so-leitor" href="#principal">Ir para o conteúdo</a>
+<div class="painel">
+  <aside class="lateral" id="lateral" aria-label="Barra lateral"></aside>
+  <main class="principal" id="principal">
+    <header class="barra-topo" id="topo"></header>
+    <div><h1>Configurações</h1><p class="mudo">Atualize os dados da sua conta.</p></div>
+    <div class="grade" style="grid-template-columns:repeat(auto-fit,minmax(340px,1fr))">
+      <section class="pcard" aria-labelledby="t-conta">
+        <div class="cab" style="justify-content:flex-start"><span class="icone-box" data-ic="usuario"></span><div><h2 id="t-conta">Dados da conta</h2><p class="peq mudo">Usamos esses dados para identificar você e enviar seus lembretes.</p></div></div>
+        <form class="campos" id="conta">
+          <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" type="text" required></div>
+          <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" required></div>
+          <div class="campo"><label for="zap">WhatsApp</label><input id="zap" name="zap" type="tel" aria-describedby="zap-d" required><span class="leg" id="zap-d">Os lembretes chegam neste número.</span></div>
+          <div class="cf-acoes"><button class="btn primario" type="submit">Salvar alterações</button><button class="btn" type="reset">Cancelar</button><span class="cf-ok" id="ok" role="status"></span></div>
+        </form>
+      </section>
+      <aside class="card indigo" id="plano-card" aria-label="Seu plano"></aside>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

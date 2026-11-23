@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar · Prioriza Aí</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="entrar">
+<div class="tela">
+<aside class="lado" aria-label="Sobre o Prioriza Aí">
+  <a class="logo" href="index.html"><span class="logo-i" data-ic="calendario" data-t="22"></span><span>PRIORIZA <b>AÍ</b></span></a>
+  <div class="lado-meio">
+    <p class="display">Continue de onde parou.</p>
+    <p class="destaque-txt" style="color:#fff">Suas tarefas, subtarefas e lembretes continuam do jeito que você deixou.</p>
+    <ul class="bens">
+      <li class="ben"><span class="icone-box" data-ic="lista" data-t="24"></span><div><b class="neg">Subtarefas em cada tarefa</b><p class="peq">Divida o que é grande em passos pequenos.</p></div></li>
+      <li class="ben"><span class="icone-box" data-ic="grafico" data-t="24"></span><div><b class="neg">Andamento à vista</b><p class="peq">Veja o que já foi feito e o que falta.</p></div></li>
+      <li class="ben"><span class="icone-box" data-ic="zap" data-t="24"></span><div><b class="neg">Lembretes no WhatsApp</b><p class="peq">Avisos periódicos para nada passar.</p></div></li>
+    </ul>
+  </div>
+  <div class="lembrete-ex"><span class="icone-box" style="border-radius:50%" data-ic="zap"></span><div style="display:flex;flex-direction:column"><b class="neg">Prova de JavaScript hoje às 19h</b><span class="leg">Lembrete no WhatsApp, agora</span></div></div>
+</aside>
+<main class="form">
+  <div class="form-topo"><a class="btn" href="index.html"><span data-ic="voltar" data-t="18"></span>Voltar ao início</a></div>
+  <div class="form-col">
+    <nav class="abas" aria-label="Entrar ou registrar"><a href="entrar.html" aria-current="page">Entrar</a><a href="registrar.html">Registrar</a></nav>
+    <div><h1>Bem-vindo de volta</h1><p class="mudo">Entre para ver suas tarefas e prazos de hoje.</p></div>
+    <form class="campos" id="f-entrar">
+      <div class="campo"><label for="e-mail">E-mail</label><div class="caixa"><span data-ic="email"></span><input id="e-mail" type="text" autocomplete="username" placeholder="voce@email.com" required></div></div>
+      <div class="campo"><label for="e-senha">Senha</label><div class="caixa"><span data-ic="cadeado"></span><input id="e-senha" type="password" autocomplete="current-password" placeholder="Digite sua senha" required><button class="icone-btn" type="button" data-ver="e-senha" aria-pressed="false" aria-label="Mostrar senha"><span data-ic="olho"></span></button></div></div>
+      <div class="linha"><label class="opcao"><input class="check" type="checkbox" id="manter" checked><span class="peq">Manter conectado</span></label><button class="link" type="button" id="esqueci">Esqueci a senha</button></div>
+      <p class="erro" id="erro" role="alert"></p>
+      <button class="btn primario grande bloco" type="submit">Entrar</button>
+    </form>
+    <p class="peq troca">Ainda não tem conta? <a class="link" href="registrar.html">Registrar</a></p>
+  </div>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

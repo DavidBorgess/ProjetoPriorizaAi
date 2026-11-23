@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minhas tarefas · Prioriza Aí</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="tarefas">
+<a class="so-leitor" href="#principal">Ir para o conteúdo</a>
+<div class="painel">
+  <aside class="lateral" id="lateral" aria-label="Barra lateral"></aside>
+  <main class="principal" id="principal">
+    <header class="barra-topo" id="topo"></header>
+    <div class="cab-pg">
+      <div><h1>Minhas tarefas</h1><p class="mudo" id="sub" role="status"></p></div>
+      <button class="btn primario" data-a="nova"><span data-ic="mais" data-t="18"></span>Nova tarefa</button>
+    </div>
+    <div class="grade" style="grid-template-columns:repeat(auto-fit,minmax(380px,1fr))">
+      <section class="pcard" aria-labelledby="t-lista">
+        <h2 class="so-leitor" id="t-lista">Lista de tarefas</h2>
+        <div class="filtros" role="group" aria-label="Filtrar tarefas">
+          <button class="chip" data-a="filtro" data-f="todas" aria-pressed="true">Todas</button>
+          <button class="chip" data-a="filtro" data-f="pend" aria-pressed="false">Pendentes</button>
+          <button class="chip" data-a="filtro" data-f="concl" aria-pressed="false">Concluídas</button>
+        </div>
+        <div id="lista-tarefas"></div>
+      </section>
+      <div class="col">
+        <section class="pcard" aria-labelledby="t-sel"><h2 id="t-sel" class="leg" style="font-family:var(--sans)">Tarefa selecionada</h2><div class="detalhe" id="detalhe"></div></section>
+        <section class="pcard" aria-labelledby="t-lemb"><div class="cab" style="justify-content:flex-start"><span class="icone-box" data-ic="sino"></span><h2 id="t-lemb">Lembretes das tarefas</h2></div><ul class="lembretes" id="lembretes"></ul></section>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
