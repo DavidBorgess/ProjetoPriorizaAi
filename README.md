@@ -13,11 +13,8 @@
 - [ ] Acompanhar o progresso das atividades.
 
 ## 🛠️ Tecnologias utilizadas
-
-
-<div align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js" />
-</div>
+
 
 ## 📸 Demonstração do projeto
 ### Tela inicial
