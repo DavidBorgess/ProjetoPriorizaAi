@@ -22,5 +22,7 @@
 ## 📸 Demonstração do projeto
 ### Tela inicial
 
+<img src="./pagina-inicial" width="600px">
+
 
 
