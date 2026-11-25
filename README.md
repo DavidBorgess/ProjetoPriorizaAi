@@ -22,7 +22,9 @@
 ## 📸 Demonstração do projeto
 ### Tela inicial
 
-<img src="./pagina-inicial" width="600px">
+<img width="1200" height="450" alt="prioriza-ai-parte-1" src="https://github.com/user-attachments/assets/f3fbb23f-f3c0-4fa7-80f6-c1dfcad901e9" />
+
+
 
 
 
