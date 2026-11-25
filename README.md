@@ -30,6 +30,8 @@
 
 <img width="1213" height="988" alt="prioriza-ai-parte-3 (2)" src="https://github.com/user-attachments/assets/1e036205-f44d-480c-8019-c2ae9b703c2f" />
 
+## 👥 Equipe de desenvolvimento
+
 
 
 
