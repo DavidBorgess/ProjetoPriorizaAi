@@ -2,7 +2,7 @@
  #  ProjetoPriorizaAí 
 
 
-## Projeto desenvolvido por alunos do instituto PROA em parceria com o Serasa Experian| Grupo 2
+## Projeto desenvolvido por alunos do instituto PROA em parceria com o Serasa Experian | Grupo 2
 ### Nosso objetivo é facilitar o dia a dia de jovens estudantes, oferecendo uma solução que ajude a organizar compromissos, estudos, provas e atividades profissionais. Com isso, buscamos tornar a rotina mais prática e produtiva, ajudando cada estudante a identificar prioridades, administrar melhor seu tempo e manter o equilíbrio entre suas responsabilidades.
 
 ## 🚀 Funcionalidades
@@ -15,13 +15,15 @@
 - [ ] Acompanhar o progresso das atividades.
 
 ## 🛠️ Tecnologias utilizadas
-  
+  <br>
 
   <img src="https://skillicons.dev/icons?i=html,css,js" />
 
 
-
+<br>
 ## 📸 Demonstração do projeto
+<br>
+
 ### Tela inicial
 
 <img width="1200" height="450" alt="prioriza-ai-parte-1" src="https://github.com/user-attachments/assets/f3fbb23f-f3c0-4fa7-80f6-c1dfcad901e9" />
@@ -31,7 +33,7 @@
 <img width="1213" height="988" alt="prioriza-ai-parte-3 (2)" src="https://github.com/user-attachments/assets/1e036205-f44d-480c-8019-c2ae9b703c2f" />
 
 ## 👥 Equipe de desenvolvimento
-
+<br>
 
 
 
