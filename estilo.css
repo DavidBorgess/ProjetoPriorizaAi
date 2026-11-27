@@ -1609,3 +1609,13 @@ dialog form {
         transition: none
     }
 }
+
+/* animação em blur ao abrir "Nova tarefa" */
+dialog[open]{animation:dlg-entra .45s cubic-bezier(.2,.8,.2,1)}
+dialog[open]::backdrop{animation:dlg-fundo .45s ease-out}
+@keyframes dlg-entra{from{opacity:0;filter:blur(14px);transform:translateY(16px) scale(.97)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes dlg-fundo{from{opacity:0;backdrop-filter:blur(0)}to{opacity:1;backdrop-filter:blur(6px)}}
+dialog::backdrop{backdrop-filter:blur(6px)}
+/* efeito ao rolar (GSAP): só vale quando o GSAP carregou */
+.efeitos-on .efeito{opacity:0;transform:translateY(40px);filter:blur(10px)}
+@media(prefers-reduced-motion:reduce){dialog[open],dialog[open]::backdrop{animation:none}}
