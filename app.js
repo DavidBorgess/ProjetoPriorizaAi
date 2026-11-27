@@ -176,7 +176,9 @@ function calendario() {
 }
 
 const CIRC = 2 * Math.PI * 48;
-let pcAntes = 0;
+let pcAntes = 0,
+  tween = 0,
+  ocultaArco = null;
 function progresso(P, c, pend) {
   const pc = T.length ? Math.round((c * 100) / T.length) : 0,
     ts = T.reduce((a, t) => a + t.subs.length, 0),
@@ -198,20 +200,30 @@ function progresso(P, c, pend) {
   const atualiza = () => {
     const arco = $(".arco-prog", P),
       tx = $(".anel text", P),
-      de = pcAntes;
+      eu = ++tween;
+    clearTimeout(ocultaArco);
     arco.setAttribute("stroke-dasharray", `${(CIRC * pc) / 100} ${CIRC}`);
-    arco.style.opacity = pc ? 1 : 0;
     $(".anel", P).setAttribute("aria-label", `${pc}% das tarefas concluídas`);
-    if (matchMedia("(prefers-reduced-motion:reduce)").matches || de === pc)
+    // com 0% o arco some só depois de diminuir (a ponta redonda aparece como um ponto)
+    if (pc) arco.style.opacity = 1;
+    else
+      ocultaArco = setTimeout(() => {
+        if (!pcAntes) arco.style.opacity = 0;
+      }, 850);
+    // o número acompanha o arco quadro a quadro, subindo ou descendo
+    if (matchMedia("(prefers-reduced-motion:reduce)").matches)
       tx.textContent = pc + "%";
     else {
-      const t0 = performance.now(),
-        passo = (n) => {
-          const k = Math.min(1, (n - t0) / 800);
-          tx.textContent = Math.round(de + (pc - de) * k) + "%";
-          if (k < 1) requestAnimationFrame(passo);
+      const fim = performance.now() + 1000,
+        passo = () => {
+          if (eu !== tween) return;
+          const v = (parseFloat(getComputedStyle(arco).strokeDasharray) / CIRC) * 100;
+          if (Math.abs(v - pc) > 0.4 && performance.now() < fim) {
+            tx.textContent = Math.round(v) + "%";
+            requestAnimationFrame(passo);
+          } else tx.textContent = pc + "%";
         };
-      requestAnimationFrame(passo);
+      passo();
     }
     pcAntes = pc;
     $("#p-t", P).textContent = `${c} de ${T.length}`;
